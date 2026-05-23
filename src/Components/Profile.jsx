@@ -1,0 +1,7 @@
+import { useState } from "react";
+
+function Profile() {
+  return <h1>Hello, World!</h1>;
+}
+
+export default Profile;

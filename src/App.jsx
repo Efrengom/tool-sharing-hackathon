@@ -3,23 +3,18 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
 import "./App.css";
-import {
-  Header,
-  Footer,
-  Home,
-  Library,
-  Journal,
-  Casting,
-  Calendar,
-  Translate,
-  About,
-} from "./components";
+import { BrowserRouter, Routes, Route } from "react-router";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import Search from "./Components/Search";
+import Home from "./Components/Home";
+import Profile from "./Components/Profile";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <Router>
+    <BrowserRouter>
       {/* GLOBAL LAYOUT CONTAINER
         Uses a Flex-Column 'Sticky Footer' pattern to ensure the main viewport 
         expands to fill the screen regardless of content height.
@@ -37,18 +32,14 @@ function App() {
             <Route path="/home" element={<Home />} />
 
             {/* System Pillar Routes */}
-            <Route path="/journal" element={<Journal />} />
-            <Route path="/library" element={<Library />} />
-            <Route path="/casting" element={<Casting />} />
-            <Route path="/calendar" element={<Calendar />} />
-            <Route path="/translate" element={<Translate />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/search" element={<Search />} />
           </Routes>
         </main>
 
         <Footer />
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
