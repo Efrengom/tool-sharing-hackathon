@@ -19,7 +19,7 @@ function Header() {
   ];
 
   return (
-    <header className="bg-stone-950 backdrop-blur-md sticky top-0 z-50 border-b border-stone-900 px-6 py-4">
+    <header className="bg-blue-700 backdrop-blur-md sticky top-0 z-50 border-b border-stone-900 px-6 py-4">
       <nav
         className="max-w-7xl mx-auto flex justify-between items-center"
         aria-label="Main Navigation"
@@ -29,7 +29,7 @@ function Header() {
         */}
         <hgroup className="flex items-center gap-4">
           <div className="flex flex-col">
-            <h1 className="text-stone-300 text-[10px] uppercase tracking-[0.4em] font-bold mt-1">
+            <h1 className="text-slate-50 text-[10px] uppercase tracking-[0.4em] font-bold mt-1">
               Tool Sharing
             </h1>
           </div>
@@ -43,7 +43,7 @@ function Header() {
             <li key={link.name}>
               <Link
                 to={link.href.replace("#", "/").toLowerCase()}
-                className="text-stone-400 hover:text-amber-500 text-xs uppercase tracking-widest transition-colors"
+                className="text-slate-50 hover:text-amber-500 text-xs uppercase tracking-widest transition-colors"
               >
                 {link.name}
               </Link>
@@ -56,7 +56,7 @@ function Header() {
         */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="lg:hidden text-stone-300 hover:text-amber-500 focus:outline-none"
+          className="lg:hidden text-slate-50 hover:text-amber-500 focus:outline-none"
           aria-expanded={isMenuOpen}
           aria-label="Toggle navigation menu"
         >
@@ -98,7 +98,7 @@ function Header() {
               <Link
                 to={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="block text-stone-400 hover:text-amber-500 text-sm uppercase tracking-[0.2em] transition-colors"
+                className="block text-slate-50 hover:text-amber-500 text-sm uppercase tracking-[0.2em] transition-colors"
               >
                 {link.name}
               </Link>
