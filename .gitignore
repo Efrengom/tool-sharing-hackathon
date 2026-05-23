@@ -22,3 +22,29 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+# Production Build
+build/
+
+# Environment & Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Debugging & Logs
+.eslintcache
+
+# Database
+*.sqlite
+*.db
+
+# Supabase local development
+supabase/.temp/
+supabase/.migrations/
+supabase/migrations/.DS_Store
+
+# Supabase Edge Functions
+supabase/functions/.env
